@@ -1,0 +1,59 @@
+:root {
+    --primary: #ff6b00; /* Orange Basket */
+    --secondary: #1a237e; /* Bleu Sport */
+    --dark: #111;
+    --white: #fff;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body { font-family: 'Poppins', sans-serif; background-color: #f4f4f4; color: var(--dark); }
+
+h1, h2, .logo { font-family: 'Bebas Neue', cursive; letter-spacing: 2px; }
+
+/* Navbar */
+#navbar {
+    display: flex; justify-content: space-around; align-items: center;
+    padding: 20px 0; background: var(--dark); color: var(--white);
+    position: fixed; width: 100%; z-index: 1000;
+}
+
+.logo { font-size: 2rem; }
+.logo span { color: var(--primary); }
+
+.nav-links { display: flex; list-style: none; }
+.nav-links a { color: var(--white); text-decoration: none; margin: 0 15px; font-weight: 600; text-transform: uppercase; font-size: 0.9rem; }
+.nav-links a:hover { color: var(--primary); }
+
+.btn-join { background: var(--primary); padding: 10px 20px; border-radius: 5px; }
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                url('https://images.unsplash.com/photo-1546519638-68e109498ffc?auto=format&fit=crop&w=1350&q=80') center/cover;
+    display: flex; align-items: center; justify-content: center; text-align: center; color: var(--white);
+}
+
+.hero-content h1 { font-size: 5rem; line-height: 1; }
+.hero-content h1 span { color: var(--primary); }
+.hero-content p { font-size: 1.2rem; margin: 20px 0; max-width: 600px; }
+
+.btn-primary { background: var(--primary); color: white; padding: 15px 30px; text-decoration: none; font-weight: bold; margin-right: 10px; border-radius: 5px; }
+.btn-secondary { border: 2px solid var(--white); color: white; padding: 13px 30px; text-decoration: none; font-weight: bold; border-radius: 5px; }
+
+/* Stats Bar */
+.stats-bar { display: flex; justify-content: space-around; background: var(--primary); color: white; padding: 40px 10%; margin-top: -50px; position: relative; z-index: 10; }
+.stat-item h3 { font-size: 3rem; }
+
+/* Matches Card */
+.matches-section { padding: 80px 10%; text-align: center; }
+.section-title { font-size: 3rem; margin-bottom: 40px; }
+
+.match-card {
+    background: white; padding: 30px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    display: flex; justify-content: space-between; align-items: center; max-width: 800px; margin: 0 auto;
+}
+
+.team-vs { display: flex; align-items: center; gap: 20px; font-weight: bold; font-size: 1.2rem; }
+.vs { color: var(--primary); font-size: 1.5rem; }

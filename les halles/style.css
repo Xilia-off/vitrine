@@ -1,0 +1,128 @@
+:root {
+    --nicolas-red: #8b0000; /* Rouge profond type Maison Nicolas */
+    --gold: #d4af37;        /* Doré riche */
+    --dark-wood: #1a0f0a;
+    --parchment: #f2e8cf;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    background-color: #fdfaf5;
+    color: #2c2c2c;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+/* --- Header avec Bois Sombre --- */
+.wood-header {
+    background: url('https://www.transparenttextures.com/patterns/dark-wood.png'), var(--dark-wood);
+    height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    text-align: center;
+    box-shadow: inset 0 0 100px rgba(0,0,0,0.8);
+}
+
+.gold-border-top {
+    height: 10px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+}
+
+.main-title {
+    font-family: 'Cinzel', serif;
+    font-size: 4rem;
+    color: white;
+    letter-spacing: 10px;
+}
+
+.main-title span {
+    color: var(--gold);
+    margin-left: 15px;
+}
+
+.subtitle {
+    color: var(--gold);
+    font-style: italic;
+    font-size: 1.5rem;
+    margin-top: 10px;
+    letter-spacing: 2px;
+}
+
+/* --- Grille de Produits Nobles --- */
+.products-section { padding: 80px 10%; text-align: center; }
+
+.diamond-divider {
+    width: 57px; height: 1px; background: var(--gold);
+    margin: 20px auto; position: relative;
+}
+.diamond-divider::after {
+    content: '◆'; color: var(--gold);
+    position: absolute; top: -10px; left: 18px; background: #fdfaf5; padding: 0 5px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px; margin-top: 50px;
+}
+
+.img-frame {
+    border: 1px solid var(--gold);
+    padding: 10px;
+    background: white;
+    transition: 0.5s;
+}
+
+.product-card img {
+    width: 100%; height: 300px;
+    object-fit: cover;
+    filter: sepia(0.2);
+}
+
+.product-card h3 {
+    margin-top: 20px;
+    font-family: 'Cinzel', serif;
+    color: var(--nicolas-red);
+}
+
+.product-card:hover .img-frame {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+/* --- Section Parchemin --- */
+.history-block {
+    background: url('https://images.unsplash.com/photo-1541123356219-284ebe98ae3b?q=80&w=1500&auto=format&fit=crop'); /* Fond bois sombre */
+    padding: 100px 0;
+    background-size: cover;
+}
+
+.parchment-container {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 40px;
+    background: var(--parchment);
+    border-radius: 5px;
+    position: relative;
+    box-shadow: 20px 20px 60px rgba(0,0,0,0.5);
+    border: 1px solid #d4c4a8;
+}
+
+.parchment h2 { font-family: 'Cinzel', serif; color: var(--nicolas-red); margin-bottom: 20px; }
+
+.seal {
+    position: absolute;
+    bottom: -30px; right: -30px;
+    width: 100px;
+    filter: drop-shadow(5px 5px 5px rgba(0,0,0,0.3));
+}
+
+footer {
+    background: var(--dark-wood);
+    color: var(--gold);
+    text-align: center;
+    padding: 40px;
+    font-family: 'Cinzel', serif;
+}
